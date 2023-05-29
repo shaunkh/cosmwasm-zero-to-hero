@@ -10,4 +10,8 @@ pub enum ContractError {
     Unauthorized {},
     // Add any other custom errors you like here.
     // Look at https://docs.rs/thiserror/1.0.21/thiserror/ for details.
+
+    // CustomError { val: "Foo" }, "Custom Error val: Foo"
+    #[error("Custom Error val: {val:?}")]
+    CustomError { val: String },
 }
