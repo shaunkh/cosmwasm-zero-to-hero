@@ -6,7 +6,9 @@ pub struct InstantiateMsg {
 }
 
 #[cw_serde]
-pub enum ExecuteMsg {}
+pub enum ExecuteMsg {
+    CreatePoll { question: String },
+}
 
 #[cw_serde]
 #[derive(QueryResponses)]
